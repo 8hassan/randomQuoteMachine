@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+}
+#container{
+    background-color: darkcyan;
+    width: 100vw;
+    height: 100vh;
+    
+}
+#quote-box{
+    width: 65vw;
+    height: 40vh;
+    min-height: 300px;
+    max-width: 700px;
+    box-shadow: 2px 2px 20px 5px black;
+    background-color: lightgrey;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    padding: 30px;
+}
+#quote{
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: monospace;
+    line-height: 3rem;
+    color: darkcyan;
+    font-weight: bold;
+}
+#quote::before{
+    content: '“';
+    font-size: 2.2rem;
+}
+#quote::after{
+    content: "”";
+    font-size: 2.2rem;
+}
+#person{
+    font-size: 2rem;
+    color: black;
+    font-style: italic;
+    font-family: cursive;
+    font-weight: bolder;
+    text-align: right;
+}
+#person::before{
+    content: "--";
+}
+button{
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: darkcyan;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    width: 40%;
+}
+@media only screen and (max-width: 600px){
+    #quote{
+        font-size: 1.3rem;
+        line-height: unset;
+    }
+    #person{
+        font-size: 1.7rem;
+    }
+    button{
+        width: 50%;
+        font-size: 1rem;
+        padding: 10px;
+    }
+    #quote-box{
+        height: 35%;
+    }
+}
